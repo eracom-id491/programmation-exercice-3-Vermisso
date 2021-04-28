@@ -1,5 +1,5 @@
 let isFinished = false;
-let triangleAmount = 10;
+let rectAmount;
 
 
 function setup() {
@@ -7,14 +7,30 @@ function setup() {
   let canvas = createCanvas(windowWidth - navWidth, windowHeight);
   canvas.parent('canvas');
   background(255);
+  rectAmount = 0;
 }
 
 function draw() {
   
-  for(x = 0; x <= 50; x = x+ 5)
+if(isFinished == false)
+{
+  for(x = 0; x <= width/2; x = x + width/random(2, 30))
   {
-    rect(x, x, x, x);
+    for(y = 0; y <= height/2; y = y + width/random(2, 30))
+    {
+      noFill();
+      rectMode(CENTER);
+      rect(width/2,height/2,x,y);
+      rectAmount += 1;
+      
+    }
   }
+
+  if(rectAmount >= 10){
+    isFinished = true;
+  }
+}
+  
     
    
     
