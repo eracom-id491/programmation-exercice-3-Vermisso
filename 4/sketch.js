@@ -10,21 +10,11 @@ function setup() {
 }
 
 function draw() {
-  if(isFinished = false){
-    for (let x = 50; x <= width-50; x += 20)
-    {
-      for (let y = 50; y <= height-50; y+=20)
-      {
-        triangle (random(width), random(height), random(width), random(height), random(width), random(height));
-        triangleAmount = triangleAmount + 1;
-          
-        if(triangleAmount <= 20){
-          isFinished = true;
-        }
-         
-        
-      }
-    } 
+  
+  for(x = 0; x <= 50; x = x+ 5)
+  {
+    rect(x, x, x, x);
+  }
     
    
     
