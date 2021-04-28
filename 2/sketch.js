@@ -7,8 +7,14 @@ function setup() {
 
 function draw() {
   fill(0);
-  for (let x = 10; x < width; x = x + 30) {
-    ellipse(x, height / 2, 10, 10);
+  noFill();
+  rectMode(CENTER);
+  
+  for (let x = 50; x <= width-50; x += 20) {
+    for (let y = 50; y <= height-50; y+=20) {
+        
+        rect(x, y, 10, 10); 
+    }
   }
 }
 
