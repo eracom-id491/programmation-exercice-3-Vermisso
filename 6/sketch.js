@@ -6,10 +6,23 @@ function setup() {
 }
 
 function draw() {
-  fill(0);
-  for (let x = 10; x < width; x = x + 30) {
-    ellipse(x, height / 2, 10, 10);
+  noFill();
+  for (let x = 10; x <= width; x = x + 70) {
+    ellipse(x, x, x, x);
+
+    for (let x = 10; x <= width; x = x + 70) {
+      ellipse(x, height/2, x, x);
+
+      for (let x = 10; x <= width; x = x + 70) {
+        ellipse(x, height, x, x);
+    
+      }
+    }
+
+
   }
+
+  
 }
 
 function windowResized() {

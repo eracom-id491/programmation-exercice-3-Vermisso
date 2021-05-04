@@ -6,11 +6,15 @@ function setup() {
 }
 
 function draw() {
-  let x = 10;
-  fill(0);
-  for (let x = 10; x < width; x = x + 30) {
-    ellipse(x, height / 2, 10, 10);
+ for(x = 50; x < width-30; x += 50)
+ {
+  for(y = 50; y < height-30; y += 50)
+  {
+    noFill();
+    triangle(x, y, x + 30, y, x, y + 30);   
   }
+ }
+  
 }
 
 function windowResized() {
